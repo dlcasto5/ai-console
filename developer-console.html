@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Developer Console</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="console">
+    <div id="tabs">
+      <button class="tab" onclick="showTab('elements')">Code Elements</button>
+      <button class="tab" onclick="showTab('sql')">SQL Console</button>
+      <button class="tab" onclick="showTab('viewer')">Code Viewer</button>
+      <button class="tab" onclick="showTab('editor')">Code Editor</button>
+    </div>
+    <div id="content">
+      <div id="elements" class="tab-content">
+        <h3>Website Code Elements</h3>
+        <div id="dom-tree"></div>
+      </div>
+      <div id="sql" class="tab-content">
+        <h3>SQL Console</h3>
+        <textarea id="sql-input" placeholder="Write your SQL query here..."></textarea>
+        <button onclick="executeSQL()">Run Query</button>
+        <table id="sql-results"></table>
+      </div>
+      <div id="viewer" class="tab-content">
+        <h3>Code Viewer</h3>
+        <pre id="code-viewer"></pre>
+      </div>
+      <div id="editor" class="tab-content">
+        <h3>Code Editor</h3>
+        <textarea id="code-editor"></textarea>
+        <button onclick="applyChanges()">Apply Changes</button>
+        <iframe id="preview"></iframe>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
